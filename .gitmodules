@@ -16,3 +16,6 @@
 [submodule "external/SDL_ttf"]
 	path = external/SDL_ttf
 	url = https://github.com/SuperTux/SDL_ttf
+[submodule "external/nanogui"]
+	path = external/nanogui
+	url = https://github.com/mitsuba-renderer/nanogui
