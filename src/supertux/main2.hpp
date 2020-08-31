@@ -1,5 +1,5 @@
 //  SuperTux
-//  Copyright (C) 2009 Ingo Ruhnke <grumbel@gmail.com>
+//  Copyright (C) 2006 Matthias Braun <matze@braunis.de>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -14,15 +14,24 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#ifndef HEADER_SUPERTUX_SUPERTUX_MAIN2_HPP
+#define HEADER_SUPERTUX_SUPERTUX_MAIN2_HPP
 
-#include <SDL.h>
 
-#include "supertux/main2.hpp"
-
-int main(int argc, char** argv)
+class Main2 final
 {
-  return Main2().run(argc, argv);
-}
+public:
+  Main2();
 
+  /** We call it run() instead of main() as main collides with
+      #define main SDL_main from SDL.h */
+  int run(int argc, char** argv);
+
+private:
+  Main2(const Main2&) = delete;
+  Main2& operator=(const Main2&) = delete;
+};
+
+#endif
 
 /* EOF */
